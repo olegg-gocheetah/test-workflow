@@ -39,7 +39,10 @@ jobs:
           ref: docs
       - name: Update docs branch
         run: |
-          rm -rf *
+          git config --global user.email "oleg.g@gocheetah.com"
+          git config --global user.name "Oleg (Automated)"
+          git rm -rf .
+          git clean -fxd
           mv /tmp/docs ./
           git add .
           git commit -m "docs refresh"

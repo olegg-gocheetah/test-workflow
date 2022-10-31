@@ -28,7 +28,6 @@ jobs:
       - name: Build coverage
         run: |
           npm run coverage
-          npm run build-storybook
           mv ./coverage /tmp/docs/coverage
       - name: Build Storybook
         run: |

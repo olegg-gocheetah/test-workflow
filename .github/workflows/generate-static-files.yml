@@ -34,11 +34,12 @@ jobs:
         run: |
           npm run build-storybook
           mv ./storybook-static /tmp/docs/storybook
-      - name: Update docs branch
-      - uses: actions/checkout@v3
+      - name: Checkout docs branch
+        uses: actions/checkout@v3
         with:
           ref: docs
-      - run: |
+      - name: Update docs branch
+        run: |
           rm -rf *
           mv /tmp/docs /
           git add .

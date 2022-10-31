@@ -35,7 +35,7 @@ jobs:
           npm run build-storybook
           mv ./storybook-static /tmp/docs/storybook
       - name: Update docs branch
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
         with:
           ref: docs
         run: |

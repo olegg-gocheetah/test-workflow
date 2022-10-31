@@ -43,7 +43,7 @@ jobs:
           git config --global user.name "Oleg (Automated)"
           git rm -rf .
           git clean -fxd
-          mv /tmp/docs ./
+          mv /tmp/docs/* ./
           git add .
           git commit -m "docs refresh"
           git push origin HEAD
